@@ -5,9 +5,8 @@ Background Information About Pulsars
 Pulsars are rotating neutron stars that emit beams of electromagnetic radiation that is detectable on Earth (Wikimedia Foundation, 2021). Scientists use pulsars to investigate the state of matter, measure distance of cosmic objects, and even use them to test the universal force of gravity (Cofield, 2016). Machine learning classifiers are used in studying and labelling of pulsar candidates for an efficient analysis. In particular, the binary classification system is commonly used (Lyon et al., 2016).
 
 ##### About Our Project
->In this project, we wish to answer the question that:
-
-Is the unknown star a pulsar based on its measurement of variables of interest?
+In this project, we wish to answer the question that:
+>Is the unknown star a pulsar based on its measurement of variables of interest?
 
 ##### About The Dataset
 From the dataset provided by Lyon, there is a training dataset and a testing dataset; in this project, we will be using the training dataset only to perform our analysis with reason provided in method part (Lyon et al., 2016). The training dataset contains 12,528 candidates of pulsar stars. Since each pulsar produces slightly different emission patterns as they rotate, each candidate's data is averaged over many rotations of the pulsar (Lyon et al., 2016). Each candidate in the dataset is described with 8 continuous variables, and a single class variable. The first four statistics are obtained from an integrated pulsar profile, which describe a longitude-resolved version of the signal that has been averaged (Lyon et al., 2016). Variables 5 to 8 are obtained from the DM-SNR curve, where DM is a measure of dispersion signal received and SNR is the signal-to-noise ratio (Lyon et al., 2016). The last variable indicates the class of the candidate.
@@ -29,7 +28,7 @@ Variables:
 ## Discussion
 Our model predicts unknown pulsar stars based on 17 nearest neighbors' values, and the accuracy of our model is 92.78%. Before we built the model, we expected that it would correctly predict the class of the testing data majority of the time. The finished model is able to perform what we expected. The impact of our model is significant when identifying pulsar stars since many detections of signals are actually caused by radio frequency interference (RFI) and noise, and real signals from pulsars are sometimes hard to find (Lyon et al., 2016). Our model uses mean, standard deviation, kurtosis, and skewness from integrated profiles to analyse the unknown star and make predictions, which could be used as a guide to more efficiently identify real pulsars rather than RFI. However, as the proportion of real pulsar data is relatively small compared to non-pulsar in our training set, a future question could be: can accuracy be improved by increasing the proportion of real-pulsar, as this helps our model know real-pulsar stars better?
 
-References
+## References
 Cofield, C. (2016, April 22). What are pulsars? Space.com. Retrieved November 6, 2021, from https://www.space.com/32661-pulsars.html.
 
 Lyon, R. J., HTRU2, doi: 10.6084/m9.figshare.3080389.v1.
